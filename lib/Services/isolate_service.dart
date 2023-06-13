@@ -1,11 +1,11 @@
 import 'dart:isolate';
 
-import 'package:blackhole/Screens/Player/audioplayer.dart';
-import 'package:blackhole/Services/youtube_services.dart';
 import 'package:get_it/get_it.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:logging/logging.dart';
 import 'package:path_provider/path_provider.dart';
+import 'package:sungeet/Screens/Player/audioplayer.dart';
+import 'package:sungeet/Services/youtube_services.dart';
 
 SendPort? isolateSendPort;
 

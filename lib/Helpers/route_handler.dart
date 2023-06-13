@@ -17,19 +17,19 @@
  * Copyright (c) 2021-2022, Ankit Sangwan
  */
 
-import 'package:blackhole/APIs/api.dart';
-import 'package:blackhole/APIs/spotify_api.dart';
-import 'package:blackhole/Helpers/audio_query.dart';
-import 'package:blackhole/Helpers/spotify_helper.dart';
-import 'package:blackhole/Screens/Common/song_list.dart';
-import 'package:blackhole/Screens/Player/audioplayer.dart';
-import 'package:blackhole/Screens/Search/search.dart';
-import 'package:blackhole/Screens/YouTube/youtube_playlist.dart';
-import 'package:blackhole/Services/player_service.dart';
-import 'package:blackhole/Services/youtube_services.dart';
 import 'package:flutter/material.dart';
 import 'package:logging/logging.dart';
 import 'package:on_audio_query/on_audio_query.dart';
+import 'package:sungeet/APIs/api.dart';
+import 'package:sungeet/APIs/spotify_api.dart';
+import 'package:sungeet/Helpers/audio_query.dart';
+import 'package:sungeet/Helpers/spotify_helper.dart';
+import 'package:sungeet/Screens/Common/song_list.dart';
+import 'package:sungeet/Screens/Player/audioplayer.dart';
+import 'package:sungeet/Screens/Search/search.dart';
+import 'package:sungeet/Screens/YouTube/youtube_playlist.dart';
+import 'package:sungeet/Services/player_service.dart';
+import 'package:sungeet/Services/youtube_services.dart';
 
 // ignore: avoid_classes_with_only_static_members
 class HandleRoute {

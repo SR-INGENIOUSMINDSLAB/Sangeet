@@ -17,10 +17,10 @@
  * Copyright (c) 2021-2022, Ankit Sangwan
  */
 
-import 'package:blackhole/Helpers/config.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 import 'package:palette_generator/palette_generator.dart';
+import 'package:sungeet/Helpers/config.dart';
 
 Future<List<Color>> getColors({
   required ImageProvider imageProvider,

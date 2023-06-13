@@ -18,8 +18,8 @@
  */
 
 import 'package:audio_service/audio_service.dart';
-import 'package:blackhole/Helpers/image_resolution_modifier.dart';
-import 'package:blackhole/Helpers/song_item.dart';
+import 'package:sungeet/Helpers/image_resolution_modifier.dart';
+import 'package:sungeet/Helpers/song_item.dart';
 import 'package:youtube_explode_dart/youtube_explode_dart.dart';
 
 // ignore: avoid_classes_with_only_static_members

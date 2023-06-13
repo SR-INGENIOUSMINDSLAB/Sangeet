@@ -1,18 +1,18 @@
 /*
- *  This file is part of BlackHole (https://github.com/Sangwan5688/BlackHole).
+ *  This file is part of sungeet (https://github.com/Sangwan5688/sungeet).
  * 
- * BlackHole is free software: you can redistribute it and/or modify
+ * sungeet is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  *
- * BlackHole is distributed in the hope that it will be useful,
+ * sungeet is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU Lesser General Public License for more details.
  *
  * You should have received a copy of the GNU Lesser General Public License
- * along with BlackHole.  If not, see <http://www.gnu.org/licenses/>.
+ * along with sungeet.  If not, see <http://www.gnu.org/licenses/>.
  * 
  * Copyright (c) 2021-2022, Ankit Sangwan
  */
@@ -21,25 +21,6 @@ import 'dart:async';
 import 'dart:io';
 
 import 'package:audio_service/audio_service.dart';
-import 'package:blackhole/Helpers/config.dart';
-import 'package:blackhole/Helpers/countrycodes.dart';
-import 'package:blackhole/Helpers/handle_native.dart';
-import 'package:blackhole/Helpers/import_export_playlist.dart';
-import 'package:blackhole/Helpers/logging.dart';
-import 'package:blackhole/Helpers/route_handler.dart';
-import 'package:blackhole/Screens/About/about.dart';
-import 'package:blackhole/Screens/Home/home.dart';
-import 'package:blackhole/Screens/Library/downloads.dart';
-import 'package:blackhole/Screens/Library/nowplaying.dart';
-import 'package:blackhole/Screens/Library/playlists.dart';
-import 'package:blackhole/Screens/Library/recent.dart';
-import 'package:blackhole/Screens/Library/stats.dart';
-import 'package:blackhole/Screens/Login/auth.dart';
-import 'package:blackhole/Screens/Login/pref.dart';
-import 'package:blackhole/Screens/Player/audioplayer.dart';
-import 'package:blackhole/Screens/Settings/new_settings_page.dart';
-import 'package:blackhole/Services/audio_service.dart';
-import 'package:blackhole/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_displaymode/flutter_displaymode.dart';
@@ -51,13 +32,32 @@ import 'package:logging/logging.dart';
 import 'package:metadata_god/metadata_god.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:receive_sharing_intent/receive_sharing_intent.dart';
+import 'package:sungeet/Helpers/config.dart';
+import 'package:sungeet/Helpers/countrycodes.dart';
+import 'package:sungeet/Helpers/handle_native.dart';
+import 'package:sungeet/Helpers/import_export_playlist.dart';
+import 'package:sungeet/Helpers/logging.dart';
+import 'package:sungeet/Helpers/route_handler.dart';
+import 'package:sungeet/Screens/About/about.dart';
+import 'package:sungeet/Screens/Home/home.dart';
+import 'package:sungeet/Screens/Library/downloads.dart';
+import 'package:sungeet/Screens/Library/nowplaying.dart';
+import 'package:sungeet/Screens/Library/playlists.dart';
+import 'package:sungeet/Screens/Library/recent.dart';
+import 'package:sungeet/Screens/Library/stats.dart';
+import 'package:sungeet/Screens/Login/auth.dart';
+import 'package:sungeet/Screens/Login/pref.dart';
+import 'package:sungeet/Screens/Player/audioplayer.dart';
+import 'package:sungeet/Screens/Settings/new_settings_page.dart';
+import 'package:sungeet/Services/audio_service.dart';
+import 'package:sungeet/theme/app_theme.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   Paint.enableDithering = true;
 
   if (Platform.isWindows || Platform.isLinux || Platform.isMacOS) {
-    await Hive.initFlutter('BlackHole');
+    await Hive.initFlutter('sungeet');
   } else {
     await Hive.initFlutter();
   }
@@ -100,8 +100,8 @@ Future<void> startService() async {
   final AudioPlayerHandler audioHandler = await AudioService.init(
     builder: () => AudioPlayerHandlerImpl(),
     config: AudioServiceConfig(
-      androidNotificationChannelId: 'com.shadow.blackhole.channel.audio',
-      androidNotificationChannelName: 'BlackHole',
+      androidNotificationChannelId: 'com.shadow.sungeet.channel.audio',
+      androidNotificationChannelName: 'sungeet',
       androidNotificationIcon: 'drawable/ic_stat_music_note',
       androidShowNotificationBadge: true,
       androidStopForegroundOnPause: false,
@@ -121,8 +121,8 @@ Future<void> openHiveBox(String boxName, {bool limit = false}) async {
     File dbFile = File('$dirPath/$boxName.hive');
     File lockFile = File('$dirPath/$boxName.lock');
     if (Platform.isWindows || Platform.isLinux || Platform.isMacOS) {
-      dbFile = File('$dirPath/BlackHole/$boxName.hive');
-      lockFile = File('$dirPath/BlackHole/$boxName.lock');
+      dbFile = File('$dirPath/sungeet/$boxName.hive');
+      lockFile = File('$dirPath/sungeet/$boxName.lock');
     }
     await dbFile.delete();
     await lockFile.delete();

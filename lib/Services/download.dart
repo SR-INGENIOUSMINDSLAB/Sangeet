@@ -1,18 +1,18 @@
 /*
- *  This file is part of BlackHole (https://github.com/Sangwan5688/BlackHole).
+ *  This file is part of sungeet (https://github.com/Sangwan5688/sungeet).
  * 
- * BlackHole is free software: you can redistribute it and/or modify
+ * sungeet is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  *
- * BlackHole is distributed in the hope that it will be useful,
+ * sungeet is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU Lesser General Public License for more details.
  *
  * You should have received a copy of the GNU Lesser General Public License
- * along with BlackHole.  If not, see <http://www.gnu.org/licenses/>.
+ * along with sungeet.  If not, see <http://www.gnu.org/licenses/>.
  * 
  * Copyright (c) 2021-2022, Ankit Sangwan
  */
@@ -21,9 +21,6 @@ import 'dart:io';
 
 import 'package:audiotagger/audiotagger.dart';
 import 'package:audiotagger/models/tag.dart';
-import 'package:blackhole/CustomWidgets/snackbar.dart';
-import 'package:blackhole/Helpers/lyrics.dart';
-import 'package:blackhole/Services/ext_storage_provider.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 // import 'package:flutter_downloader/flutter_downloader.dart';
@@ -34,6 +31,9 @@ import 'package:logging/logging.dart';
 import 'package:metadata_god/metadata_god.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:permission_handler/permission_handler.dart';
+import 'package:sungeet/CustomWidgets/snackbar.dart';
+import 'package:sungeet/Helpers/lyrics.dart';
+import 'package:sungeet/Services/ext_storage_provider.dart';
 
 class Download with ChangeNotifier {
   static final Map<String, Download> _instances = {};
@@ -488,7 +488,7 @@ class Download with ChangeNotifier {
               genre: data['language'].toString(),
               year: data['year'].toString(),
               lyrics: lyrics,
-              comment: 'BlackHole',
+              comment: 'sungeet',
             );
             Logger.root.info('Started tag editing');
             final tagger = Audiotagger();
@@ -518,7 +518,7 @@ class Download with ChangeNotifier {
               genre: data['language'].toString(),
               year: int.parse(data['year'].toString()),
               // lyrics: lyrics,
-              // comment: 'BlackHole',
+              // comment: 'sungeet',
               // trackNumber: 1,
               // trackTotal: 12,
               // discNumber: 1,

@@ -18,16 +18,16 @@
  */
 
 import 'package:audio_service/audio_service.dart';
-import 'package:blackhole/CustomWidgets/collage.dart';
-import 'package:blackhole/CustomWidgets/gradient_containers.dart';
-import 'package:blackhole/CustomWidgets/snackbar.dart';
-import 'package:blackhole/CustomWidgets/textinput_dialog.dart';
-import 'package:blackhole/Helpers/audio_query.dart';
-import 'package:blackhole/Helpers/playlist.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:hive/hive.dart';
 import 'package:on_audio_query/on_audio_query.dart';
+import 'package:sungeet/CustomWidgets/collage.dart';
+import 'package:sungeet/CustomWidgets/gradient_containers.dart';
+import 'package:sungeet/CustomWidgets/snackbar.dart';
+import 'package:sungeet/CustomWidgets/textinput_dialog.dart';
+import 'package:sungeet/Helpers/audio_query.dart';
+import 'package:sungeet/Helpers/playlist.dart';
 
 class AddToOffPlaylist {
   OfflineAudioQuery offlineAudioQuery = OfflineAudioQuery();

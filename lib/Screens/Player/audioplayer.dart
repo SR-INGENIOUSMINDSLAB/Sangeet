@@ -1,18 +1,18 @@
 /*
- *  This file is part of BlackHole (https://github.com/Sangwan5688/BlackHole).
+ *  This file is part of sungeet (https://github.com/Sangwan5688/sungeet).
  * 
- * BlackHole is free software: you can redistribute it and/or modify
+ * sungeet is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  *
- * BlackHole is distributed in the hope that it will be useful,
+ * sungeet is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU Lesser General Public License for more details.
  *
  * You should have received a copy of the GNU Lesser General Public License
- * along with BlackHole.  If not, see <http://www.gnu.org/licenses/>.
+ * along with sungeet.  If not, see <http://www.gnu.org/licenses/>.
  * 
  * Copyright (c) 2021-2022, Ankit Sangwan
  */
@@ -23,24 +23,6 @@ import 'dart:math';
 import 'dart:ui' as ui;
 
 import 'package:audio_service/audio_service.dart';
-import 'package:blackhole/CustomWidgets/add_playlist.dart';
-import 'package:blackhole/CustomWidgets/animated_text.dart';
-import 'package:blackhole/CustomWidgets/copy_clipboard.dart';
-import 'package:blackhole/CustomWidgets/download_button.dart';
-import 'package:blackhole/CustomWidgets/empty_screen.dart';
-import 'package:blackhole/CustomWidgets/equalizer.dart';
-import 'package:blackhole/CustomWidgets/gradient_containers.dart';
-import 'package:blackhole/CustomWidgets/like_button.dart';
-import 'package:blackhole/CustomWidgets/popup.dart';
-import 'package:blackhole/CustomWidgets/seek_bar.dart';
-import 'package:blackhole/CustomWidgets/snackbar.dart';
-import 'package:blackhole/CustomWidgets/textinput_dialog.dart';
-import 'package:blackhole/Helpers/config.dart';
-import 'package:blackhole/Helpers/dominant_color.dart';
-import 'package:blackhole/Helpers/lyrics.dart';
-import 'package:blackhole/Helpers/mediaitem_converter.dart';
-import 'package:blackhole/Screens/Common/song_list.dart';
-import 'package:blackhole/Screens/Search/albums.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flip_card/flip_card.dart';
 import 'package:flutter/cupertino.dart';
@@ -57,6 +39,24 @@ import 'package:material_design_icons_flutter/material_design_icons_flutter.dart
 import 'package:rxdart/rxdart.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:sliding_up_panel/sliding_up_panel.dart';
+import 'package:sungeet/CustomWidgets/add_playlist.dart';
+import 'package:sungeet/CustomWidgets/animated_text.dart';
+import 'package:sungeet/CustomWidgets/copy_clipboard.dart';
+import 'package:sungeet/CustomWidgets/download_button.dart';
+import 'package:sungeet/CustomWidgets/empty_screen.dart';
+import 'package:sungeet/CustomWidgets/equalizer.dart';
+import 'package:sungeet/CustomWidgets/gradient_containers.dart';
+import 'package:sungeet/CustomWidgets/like_button.dart';
+import 'package:sungeet/CustomWidgets/popup.dart';
+import 'package:sungeet/CustomWidgets/seek_bar.dart';
+import 'package:sungeet/CustomWidgets/snackbar.dart';
+import 'package:sungeet/CustomWidgets/textinput_dialog.dart';
+import 'package:sungeet/Helpers/config.dart';
+import 'package:sungeet/Helpers/dominant_color.dart';
+import 'package:sungeet/Helpers/lyrics.dart';
+import 'package:sungeet/Helpers/mediaitem_converter.dart';
+import 'package:sungeet/Screens/Common/song_list.dart';
+import 'package:sungeet/Screens/Search/albums.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class PlayScreen extends StatefulWidget {

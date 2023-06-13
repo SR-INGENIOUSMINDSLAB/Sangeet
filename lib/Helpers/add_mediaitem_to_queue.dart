@@ -18,11 +18,11 @@
  */
 
 import 'package:audio_service/audio_service.dart';
-import 'package:blackhole/CustomWidgets/snackbar.dart';
-import 'package:blackhole/Screens/Player/audioplayer.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:get_it/get_it.dart';
+import 'package:sungeet/CustomWidgets/snackbar.dart';
+import 'package:sungeet/Screens/Player/audioplayer.dart';
 
 void addToNowPlaying({
   required BuildContext context,

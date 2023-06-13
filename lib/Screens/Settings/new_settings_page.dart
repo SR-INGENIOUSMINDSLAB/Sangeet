@@ -1,15 +1,15 @@
-import 'package:blackhole/CustomWidgets/gradient_containers.dart';
-import 'package:blackhole/Screens/Settings/app_ui.dart';
-import 'package:blackhole/Screens/Settings/backup_and_restore.dart';
-import 'package:blackhole/Screens/Settings/download.dart';
-import 'package:blackhole/Screens/Settings/music_playback.dart';
-import 'package:blackhole/Screens/Settings/others.dart';
-import 'package:blackhole/Screens/Settings/theme.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:hive_flutter/adapters.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
+import 'package:sungeet/CustomWidgets/gradient_containers.dart';
+import 'package:sungeet/Screens/Settings/app_ui.dart';
+import 'package:sungeet/Screens/Settings/backup_and_restore.dart';
+import 'package:sungeet/Screens/Settings/download.dart';
+import 'package:sungeet/Screens/Settings/music_playback.dart';
+import 'package:sungeet/Screens/Settings/others.dart';
+import 'package:sungeet/Screens/Settings/theme.dart';
 
 class NewSettingsPage extends StatefulWidget {
   final Function? callback;

@@ -19,15 +19,15 @@
 
 import 'dart:convert';
 
-import 'package:blackhole/APIs/api.dart';
-import 'package:blackhole/APIs/spotify_api.dart';
-import 'package:blackhole/CustomWidgets/gradient_containers.dart';
-import 'package:blackhole/Helpers/playlist.dart';
-import 'package:blackhole/Services/youtube_services.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:http/http.dart';
 import 'package:logging/logging.dart';
+import 'package:sungeet/APIs/api.dart';
+import 'package:sungeet/APIs/spotify_api.dart';
+import 'package:sungeet/CustomWidgets/gradient_containers.dart';
+import 'package:sungeet/Helpers/playlist.dart';
+import 'package:sungeet/Services/youtube_services.dart';
 import 'package:youtube_explode_dart/youtube_explode_dart.dart';
 
 // ignore: avoid_classes_with_only_static_members

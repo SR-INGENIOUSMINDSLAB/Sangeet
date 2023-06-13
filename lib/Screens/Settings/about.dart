@@ -1,10 +1,10 @@
-import 'package:blackhole/CustomWidgets/copy_clipboard.dart';
-import 'package:blackhole/CustomWidgets/gradient_containers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:share_plus/share_plus.dart';
+import 'package:sungeet/CustomWidgets/copy_clipboard.dart';
+import 'package:sungeet/CustomWidgets/gradient_containers.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class AboutPage extends StatefulWidget {
@@ -209,7 +209,7 @@ class _AboutPageState extends State<AboutPage> {
                         isThreeLine: true,
                         onTap: () {
                           const String upiUrl =
-                              'upi://pay?pa=ankit.sangwan.5688@oksbi&pn=BlackHole';
+                              'upi://pay?pa=ankit.sangwan.5688@oksbi&pn=sungeet';
                           launchUrl(
                             Uri.parse(upiUrl),
                             mode: LaunchMode.externalApplication,
@@ -294,7 +294,7 @@ class _AboutPageState extends State<AboutPage> {
                                               Navigator.pop(context);
                                               launchUrl(
                                                 Uri.parse(
-                                                  'https://mail.google.com/mail/?extsrc=mailto&url=mailto%3A%3Fto%3Dblackholeyoucantescape%40gmail.com%26subject%3DRegarding%2520Mobile%2520App',
+                                                  'https://mail.google.com/mail/?extsrc=mailto&url=mailto%3A%3Fto%3Dsungeetyoucantescape%40gmail.com%26subject%3DRegarding%2520Mobile%2520App',
                                                 ),
                                                 mode: LaunchMode
                                                     .externalApplication,
@@ -450,7 +450,7 @@ class _AboutPageState extends State<AboutPage> {
                                               Navigator.pop(context);
                                               launchUrl(
                                                 Uri.parse(
-                                                  'https://t.me/blackhole_official',
+                                                  'https://t.me/sungeet_official',
                                                 ),
                                                 mode: LaunchMode
                                                     .externalApplication,

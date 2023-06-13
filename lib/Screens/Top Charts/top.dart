@@ -1,35 +1,35 @@
 /*
- *  This file is part of BlackHole (https://github.com/Sangwan5688/BlackHole).
+ *  This file is part of sungeet (https://github.com/Sangwan5688/sungeet).
  * 
- * BlackHole is free software: you can redistribute it and/or modify
+ * sungeet is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  *
- * BlackHole is distributed in the hope that it will be useful,
+ * sungeet is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU Lesser General Public License for more details.
  *
  * You should have received a copy of the GNU Lesser General Public License
- * along with BlackHole.  If not, see <http://www.gnu.org/licenses/>.
+ * along with sungeet.  If not, see <http://www.gnu.org/licenses/>.
  * 
  * Copyright (c) 2021-2022, Ankit Sangwan
  */
 
 import 'package:app_links/app_links.dart';
-import 'package:blackhole/APIs/spotify_api.dart';
-import 'package:blackhole/CustomWidgets/custom_physics.dart';
-import 'package:blackhole/CustomWidgets/empty_screen.dart';
-import 'package:blackhole/Helpers/countrycodes.dart';
-import 'package:blackhole/Helpers/spotify_helper.dart';
-// import 'package:blackhole/Helpers/countrycodes.dart';
-import 'package:blackhole/Screens/Search/search.dart';
-import 'package:blackhole/Screens/Settings/setting.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:hive_flutter/hive_flutter.dart';
+import 'package:sungeet/APIs/spotify_api.dart';
+import 'package:sungeet/CustomWidgets/custom_physics.dart';
+import 'package:sungeet/CustomWidgets/empty_screen.dart';
+import 'package:sungeet/Helpers/countrycodes.dart';
+import 'package:sungeet/Helpers/spotify_helper.dart';
+// import 'package:sungeet/Helpers/countrycodes.dart';
+import 'package:sungeet/Screens/Search/search.dart';
+import 'package:sungeet/Screens/Settings/setting.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 List localSongs = [];
