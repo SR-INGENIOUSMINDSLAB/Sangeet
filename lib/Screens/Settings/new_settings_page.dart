@@ -1,5 +1,4 @@
 import 'package:blackhole/CustomWidgets/gradient_containers.dart';
-import 'package:blackhole/Screens/Settings/about.dart';
 import 'package:blackhole/Screens/Settings/app_ui.dart';
 import 'package:blackhole/Screens/Settings/backup_and_restore.dart';
 import 'package:blackhole/Screens/Settings/download.dart';
@@ -255,24 +254,24 @@ class _NewSettingsPageState extends State<NewSettingsPage>
           AppLocalizations.of(context)!.autoBackLocation,
         ]
       },
-      {
-        'title': AppLocalizations.of(
-          context,
-        )!
-            .about,
-        'icon': Icons.info_outline_rounded,
-        'onTap': const AboutPage(),
-        'isThreeLine': false,
-        'items': [
-          AppLocalizations.of(context)!.version,
-          AppLocalizations.of(context)!.shareApp,
-          AppLocalizations.of(context)!.contactUs,
-          AppLocalizations.of(context)!.likedWork,
-          AppLocalizations.of(context)!.donateGpay,
-          AppLocalizations.of(context)!.joinTg,
-          AppLocalizations.of(context)!.moreInfo,
-        ]
-      },
+      // {
+      //   'title': AppLocalizations.of(
+      //     context,
+      //   )!
+      //       .about,
+      //   'icon': Icons.info_outline_rounded,
+      //   'onTap': const AboutPage(),
+      //   'isThreeLine': false,
+      //   'items': [
+      //     AppLocalizations.of(context)!.version,
+      //     AppLocalizations.of(context)!.shareApp,
+      //     AppLocalizations.of(context)!.contactUs,
+      //     AppLocalizations.of(context)!.likedWork,
+      //     AppLocalizations.of(context)!.donateGpay,
+      //     AppLocalizations.of(context)!.joinTg,
+      //     AppLocalizations.of(context)!.moreInfo,
+      //   ]
+      // },
     ];
 
     final List<Map> searchOptions = [];

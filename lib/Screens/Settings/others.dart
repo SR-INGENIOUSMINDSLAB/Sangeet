@@ -4,9 +4,7 @@ import 'package:blackhole/CustomWidgets/box_switch_tile.dart';
 import 'package:blackhole/CustomWidgets/gradient_containers.dart';
 import 'package:blackhole/CustomWidgets/snackbar.dart';
 import 'package:blackhole/CustomWidgets/textinput_dialog.dart';
-import 'package:blackhole/Helpers/countrycodes.dart';
 import 'package:blackhole/Helpers/picker.dart';
-import 'package:blackhole/main.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -60,55 +58,55 @@ class _OthersPageState extends State<OthersPage> {
           physics: const BouncingScrollPhysics(),
           padding: const EdgeInsets.all(10.0),
           children: [
-            ListTile(
-              title: Text(
-                AppLocalizations.of(
-                  context,
-                )!
-                    .lang,
-              ),
-              subtitle: Text(
-                AppLocalizations.of(
-                  context,
-                )!
-                    .langSub,
-              ),
-              onTap: () {},
-              trailing: DropdownButton(
-                value: lang,
-                style: TextStyle(
-                  fontSize: 12,
-                  color: Theme.of(context).textTheme.bodyLarge!.color,
-                ),
-                underline: const SizedBox(),
-                onChanged: (String? newValue) {
-                  if (newValue != null) {
-                    setState(
-                      () {
-                        lang = newValue;
-                        MyApp.of(context).setLocale(
-                          Locale.fromSubtags(
-                            languageCode:
-                                ConstantCodes.languageCodes[newValue] ?? 'en',
-                          ),
-                        );
-                        Hive.box('settings').put('lang', newValue);
-                      },
-                    );
-                  }
-                },
-                items: ConstantCodes.languageCodes.keys
-                    .map<DropdownMenuItem<String>>((language) {
-                  return DropdownMenuItem<String>(
-                    value: language,
-                    child: Text(
-                      language,
-                    ),
-                  );
-                }).toList(),
-              ),
-              dense: true,
-            ),
+            // ListTile(
+            //   title: Text(
+            //     AppLocalizations.of(
+            //       context,
+            //     )!
+            //         .lang,
+            //   ),
+            //   subtitle: Text(
+            //     AppLocalizations.of(
+            //       context,
+            //     )!
+            //         .langSub,
+            //   ),
+            //   onTap: () {},
+            //   trailing: DropdownButton(
+            //     value: lang,
+            //     style: TextStyle(
+            //       fontSize: 12,
+            //       color: Theme.of(context).textTheme.bodyLarge!.color,
+            //     ),
+            //     underline: const SizedBox(),
+            //     onChanged: (String? newValue) {
+            //       if (newValue != null) {
+            //         setState(
+            //           () {
+            //             lang = newValue;
+            //             MyApp.of(context).setLocale(
+            //               Locale.fromSubtags(
+            //                 languageCode:
+            //                     ConstantCodes.languageCodes[newValue] ?? 'en',
+            //               ),
+            //             );
+            //             Hive.box('settings').put('lang', newValue);
+            //           },
+            //         );
+            //       }
+            //     },
+            //     items: ConstantCodes.languageCodes.keys
+            //         .map<DropdownMenuItem<String>>((language) {
+            //       return DropdownMenuItem<String>(
+            //         value: language,
+            //         child: Text(
+            //           language,
+            //         ),
+            //       );
+            //     }).toList(),
+            //   ),
+            //   dense: true,
+            // ),
             ListTile(
               title: Text(
                 AppLocalizations.of(
@@ -456,46 +454,46 @@ class _OthersPageState extends State<OthersPage> {
             //   keyName: 'stopServiceOnPause',
             //   defaultValue: true,
             // ),
-            BoxSwitchTile(
-              title: Text(
-                AppLocalizations.of(
-                  context,
-                )!
-                    .checkUpdate,
-              ),
-              subtitle: Text(
-                AppLocalizations.of(
-                  context,
-                )!
-                    .checkUpdateSub,
-              ),
-              keyName: 'checkUpdate',
-              isThreeLine: true,
-              defaultValue: false,
-            ),
-            BoxSwitchTile(
-              title: Text(
-                AppLocalizations.of(
-                  context,
-                )!
-                    .useProxy,
-              ),
-              subtitle: Text(
-                AppLocalizations.of(
-                  context,
-                )!
-                    .useProxySub,
-              ),
-              keyName: 'useProxy',
-              defaultValue: false,
-              isThreeLine: true,
-              onChanged: ({required bool val, required Box box}) {
-                useProxy = val;
-                setState(
-                  () {},
-                );
-              },
-            ),
+            // BoxSwitchTile(
+            //   title: Text(
+            //     AppLocalizations.of(
+            //       context,
+            //     )!
+            //         .checkUpdate,
+            //   ),
+            //   subtitle: Text(
+            //     AppLocalizations.of(
+            //       context,
+            //     )!
+            //         .checkUpdateSub,
+            //   ),
+            //   keyName: 'checkUpdate',
+            //   isThreeLine: true,
+            //   defaultValue: false,
+            // ),
+            // BoxSwitchTile(
+            //   title: Text(
+            //     AppLocalizations.of(
+            //       context,
+            //     )!
+            //         .useProxy,
+            //   ),
+            //   subtitle: Text(
+            //     AppLocalizations.of(
+            //       context,
+            //     )!
+            //         .useProxySub,
+            //   ),
+            //   keyName: 'useProxy',
+            //   defaultValue: false,
+            //   isThreeLine: true,
+            //   onChanged: ({required bool val, required Box box}) {
+            //     useProxy = val;
+            //     setState(
+            //       () {},
+            //     );
+            //   },
+            // ),
             Visibility(
               visible: useProxy,
               child: ListTile(

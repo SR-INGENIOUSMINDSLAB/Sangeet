@@ -263,7 +263,7 @@ class _HomePageState extends State<HomePage> {
                   flexibleSpace: FlexibleSpaceBar(
                     title: RichText(
                       text: TextSpan(
-                        text: AppLocalizations.of(context)!.appTitle,
+                        text: 'Sungeet',
                         style: const TextStyle(
                           fontSize: 30.0,
                           fontWeight: FontWeight.w500,
@@ -437,39 +437,39 @@ class _HomePageState extends State<HomePage> {
                           }
                         },
                       ),
-                      ListTile(
-                        title: Text(AppLocalizations.of(context)!.about),
-                        contentPadding:
-                            const EdgeInsets.symmetric(horizontal: 20.0),
-                        leading: Icon(
-                          Icons.info_outline_rounded,
-                          color: Theme.of(context).iconTheme.color,
-                        ),
-                        onTap: () {
-                          Navigator.pop(context);
-                          Navigator.pushNamed(context, '/about');
-                        },
-                      ),
+                      // ListTile(
+                      //   title: Text(AppLocalizations.of(context)!.about),
+                      //   contentPadding:
+                      //       const EdgeInsets.symmetric(horizontal: 20.0),
+                      //   leading: Icon(
+                      //     Icons.info_outline_rounded,
+                      //     color: Theme.of(context).iconTheme.color,
+                      //   ),
+                      //   onTap: () {
+                      //     Navigator.pop(context);
+                      //     Navigator.pushNamed(context, '/about');
+                      //   },
+                      // ),
                     ],
                   ),
                 ),
-                SliverFillRemaining(
+                const SliverFillRemaining(
                   hasScrollBody: false,
                   child: Column(
                     children: <Widget>[
-                      const Spacer(),
-                      SafeArea(
-                        child: Padding(
-                          padding: const EdgeInsets.fromLTRB(5, 30, 5, 20),
-                          child: Center(
-                            child: Text(
-                              AppLocalizations.of(context)!.madeBy,
-                              textAlign: TextAlign.center,
-                              style: const TextStyle(fontSize: 12),
-                            ),
-                          ),
-                        ),
-                      ),
+                      Spacer(),
+                      // SafeArea(
+                      //   child: Padding(
+                      //     padding: const EdgeInsets.fromLTRB(5, 30, 5, 20),
+                      //     child: Center(
+                      //       child: Text(
+                      //         AppLocalizations.of(context)!.madeBy,
+                      //         textAlign: TextAlign.center,
+                      //         style: const TextStyle(fontSize: 12),
+                      //       ),
+                      //     ),
+                      //   ),
+                      // ),
                     ],
                   ),
                 ),

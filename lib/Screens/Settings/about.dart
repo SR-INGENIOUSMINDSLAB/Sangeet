@@ -1,12 +1,7 @@
 import 'package:blackhole/CustomWidgets/copy_clipboard.dart';
 import 'package:blackhole/CustomWidgets/gradient_containers.dart';
-import 'package:blackhole/CustomWidgets/snackbar.dart';
-import 'package:blackhole/Helpers/github.dart';
-import 'package:blackhole/Helpers/update.dart';
-import 'package:device_info_plus/device_info_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:hive/hive.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:share_plus/share_plus.dart';
@@ -74,84 +69,84 @@ class _AboutPageState extends State<AboutPage> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      ListTile(
-                        title: Text(
-                          AppLocalizations.of(
-                            context,
-                          )!
-                              .version,
-                        ),
-                        subtitle: Text(
-                          AppLocalizations.of(
-                            context,
-                          )!
-                              .versionSub,
-                        ),
-                        onTap: () {
-                          ShowSnackBar().showSnackBar(
-                            context,
-                            AppLocalizations.of(
-                              context,
-                            )!
-                                .checkingUpdate,
-                            noAction: true,
-                          );
+                      // ListTile(
+                      //   title: Text(
+                      //     AppLocalizations.of(
+                      //       context,
+                      //     )!
+                      //         .version,
+                      //   ),
+                      //   subtitle: Text(
+                      //     AppLocalizations.of(
+                      //       context,
+                      //     )!
+                      //         .versionSub,
+                      //   ),
+                      //   onTap: () {
+                      //     ShowSnackBar().showSnackBar(
+                      //       context,
+                      //       AppLocalizations.of(
+                      //         context,
+                      //       )!
+                      //           .checkingUpdate,
+                      //       noAction: true,
+                      //     );
 
-                          GitHub.getLatestVersion().then(
-                            (String latestVersion) async {
-                              if (compareVersion(
-                                latestVersion,
-                                appVersion!,
-                              )) {
-                                List? abis = await Hive.box('settings')
-                                    .get('supportedAbis') as List?;
+                      //     GitHub.getLatestVersion().then(
+                      //       (String latestVersion) async {
+                      //         if (compareVersion(
+                      //           latestVersion,
+                      //           appVersion!,
+                      //         )) {
+                      //           List? abis = await Hive.box('settings')
+                      //               .get('supportedAbis') as List?;
 
-                                if (abis == null) {
-                                  final DeviceInfoPlugin deviceInfo =
-                                      DeviceInfoPlugin();
-                                  final AndroidDeviceInfo androidDeviceInfo =
-                                      await deviceInfo.androidInfo;
-                                  abis = androidDeviceInfo.supportedAbis;
-                                  await Hive.box('settings')
-                                      .put('supportedAbis', abis);
-                                }
-                                ShowSnackBar().showSnackBar(
-                                  context,
-                                  AppLocalizations.of(context)!.updateAvailable,
-                                  duration: const Duration(seconds: 15),
-                                  action: SnackBarAction(
-                                    textColor:
-                                        Theme.of(context).colorScheme.secondary,
-                                    label: AppLocalizations.of(context)!.update,
-                                    onPressed: () {
-                                      Navigator.pop(context);
-                                      launchUrl(
-                                        Uri.parse(
-                                          'https://sangwan5688.github.io/download/',
-                                        ),
-                                        mode: LaunchMode.externalApplication,
-                                      );
-                                    },
-                                  ),
-                                );
-                              } else {
-                                ShowSnackBar().showSnackBar(
-                                  context,
-                                  AppLocalizations.of(
-                                    context,
-                                  )!
-                                      .latest,
-                                );
-                              }
-                            },
-                          );
-                        },
-                        trailing: Text(
-                          'v$appVersion',
-                          style: const TextStyle(fontSize: 12),
-                        ),
-                        dense: true,
-                      ),
+                      //           if (abis == null) {
+                      //             final DeviceInfoPlugin deviceInfo =
+                      //                 DeviceInfoPlugin();
+                      //             final AndroidDeviceInfo androidDeviceInfo =
+                      //                 await deviceInfo.androidInfo;
+                      //             abis = androidDeviceInfo.supportedAbis;
+                      //             await Hive.box('settings')
+                      //                 .put('supportedAbis', abis);
+                      //           }
+                      //           ShowSnackBar().showSnackBar(
+                      //             context,
+                      //             AppLocalizations.of(context)!.updateAvailable,
+                      //             duration: const Duration(seconds: 15),
+                      //             action: SnackBarAction(
+                      //               textColor:
+                      //                   Theme.of(context).colorScheme.secondary,
+                      //               label: AppLocalizations.of(context)!.update,
+                      //               onPressed: () {
+                      //                 Navigator.pop(context);
+                      //                 launchUrl(
+                      //                   Uri.parse(
+                      //                     'https://sangwan5688.github.io/download/',
+                      //                   ),
+                      //                   mode: LaunchMode.externalApplication,
+                      //                 );
+                      //               },
+                      //             ),
+                      //           );
+                      //         } else {
+                      //           ShowSnackBar().showSnackBar(
+                      //             context,
+                      //             AppLocalizations.of(
+                      //               context,
+                      //             )!
+                      //                 .latest,
+                      //           );
+                      //         }
+                      //       },
+                      //     );
+                      //   },
+                      //   trailing: Text(
+                      //     'v$appVersion',
+                      //     style: const TextStyle(fontSize: 12),
+                      //   ),
+                      //   dense: true,
+                      // ),
                       ListTile(
                         title: Text(
                           AppLocalizations.of(
@@ -174,29 +169,29 @@ class _AboutPageState extends State<AboutPage> {
                         },
                         dense: true,
                       ),
-                      ListTile(
-                        title: Text(
-                          AppLocalizations.of(
-                            context,
-                          )!
-                              .likedWork,
-                        ),
-                        subtitle: Text(
-                          AppLocalizations.of(
-                            context,
-                          )!
-                              .buyCoffee,
-                        ),
-                        dense: true,
-                        onTap: () {
-                          launchUrl(
-                            Uri.parse(
-                              'https://www.buymeacoffee.com/ankitsangwan',
-                            ),
-                            mode: LaunchMode.externalApplication,
-                          );
-                        },
-                      ),
+                      // ListTile(
+                      //   title: Text(
+                      //     AppLocalizations.of(
+                      //       context,
+                      //     )!
+                      //         .likedWork,
+                      //   ),
+                      //   subtitle: Text(
+                      //     AppLocalizations.of(
+                      //       context,
+                      //     )!
+                      //         .buyCoffee,
+                      //   ),
+                      //   dense: true,
+                      //   onTap: () {
+                      //     launchUrl(
+                      //       Uri.parse(
+                      //         'https://www.buymeacoffee.com/ankitsangwan',
+                      //       ),
+                      //       mode: LaunchMode.externalApplication,
+                      //     );
+                      //   },
+                      // ),
                       ListTile(
                         title: Text(
                           AppLocalizations.of(

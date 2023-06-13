@@ -292,8 +292,8 @@ class _MyAppState extends State<MyApp> {
                     : Brightness.dark,
       ),
       child: MaterialApp(
-        title: 'BlackHole',
-        restorationScopeId: 'blackhole',
+        title: 'Sungeet',
+        restorationScopeId: 'sungeet',
         debugShowCheckedModeBanner: false,
         themeMode: AppTheme.themeMode,
         theme: AppTheme.lightTheme(

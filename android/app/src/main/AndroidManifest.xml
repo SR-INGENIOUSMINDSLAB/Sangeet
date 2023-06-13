@@ -12,8 +12,8 @@
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 
     <application
-        android:icon="@mipmap/ic_launcher"
-        android:label="BlackHole"
+        android:icon="@mipmap/launcher_icon"
+        android:label="Sungeet"
         android:usesCleartextTraffic="true"
         android:requestLegacyExternalStorage="true">
         
